@@ -1,0 +1,108 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\begin{document}
+\title{Introducción a Packet Tracer}
+\author{Matías Haspert\\mati2002haspert@gmail.com}
+\date{Agosto 23, 2024}
+\maketitle
+
+\section{Packet Tracer}
+Packet Tracer es una herramienta que permite simular redes reales. Proporciona tres menús principales que puede utilizar para lo siguiente:
+\begin{itemize}
+    \item Puede agregar dispositivos y conectarlos a través de cables o de forma inalámbrica.
+    \item Puede seleccionar, eliminar, inspeccionar, etiquetar y agrupar componentes dentro de la red.
+    \item Administrar su red
+\end{itemize}
+
+El menú de administración de red le permite hacer lo siguiente:
+\begin{itemize}
+    \item Abrir una red existente/de muestra
+    \item Guarda tu red actual
+    \item Modifica tu perfil de usuario o tus preferencias
+\end{itemize}
+
+Presenta los siguientes modos de operación:
+\begin{itemize}
+    \item Modo de simulación: Permite observar el flujo de datos a través de la red en tiempo real, mostrando detalles como el contenido de los paquetes.
+    \item Modo en tiempo real: Simula el funcionamiento de la red en tiempo real sin mostrar el proceso detallado de los paquetes.
+\end{itemize}
+
+\section{Dispositivos finales}
+En esta sección enuncio los principales dispositivos con una breve descripción sobre los mismos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\linewidth]{Dispositivos Finales.png}
+    \caption{Dispositivos Finales}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{itemize}
+    \item PC (Computadora Personal): Representa un dispositivo final típico en una red, como una computadora de escritorio o portátil. Se utiliza para simular tareas como la navegación web, transferencia de archivos, y envío de correos electrónicos. En Packet Tracer, puedes configurar la dirección IP, la puerta de enlace predeterminada y otros parámetros de red.
+    \item Laptop: Similar al PC, pero con la posibilidad de simular conexiones tanto por cable como inalámbricas (Wi-Fi). Esto es útil para entender cómo funcionan las redes inalámbricas y cómo se integran con redes cableadas.
+    \item Servidor: Representa un dispositivo que proporciona servicios a otros dispositivos en la red, como servidores web, de correo, o DNS.
+    \item Teléfono IP: Simula un dispositivo de VoIP (Voice over IP) que se usa para realizar llamadas de voz a través de la red IP. Este dispositivo es importante para estudiar cómo se integran las comunicaciones de voz en las redes de datos.
+    \item Impresora: Representa un dispositivo de salida final que se conecta a la red para recibir trabajos de impresión desde cualquier dispositivo final en la misma red.
+\end{itemize}
+
+\section{Dispositos de red}
+Los dispositivos emulables disponibles Packet Tracer y sus aspectos importantes son los siguientes:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Dispositivos Red.png}
+    \caption{Dispositivos de red}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{enumerate}
+    \item Router:
+\begin{itemize}
+    \item Firmware: Los routers en Packet Tracer están equipados con un sistema operativo basado en Cisco IOS, que permite la configuración avanzada de enrutamiento, NAT, ACLs, y otros servicios de red.
+    \item Módulos de ampliación: Los routers suelen tener ranuras para agregar módulos adicionales como interfaces seriales, Ethernet, o módulos para VoIP. Estos módulos permiten personalizar el router según las necesidades de la red.
+    \item Tarjetas disponibles: Entre las tarjetas disponibles están las interfaces FastEthernet, GigabitEthernet, Serial, y también módulos WAN para conexiones más avanzadas.
+\end{itemize}
+    \item Switch:
+\begin{itemize}
+    \item Firmware: Los switches utilizan un firmware basado en IOS que soporta funcionalidades como VLANs, STP, y QoS. La configuración de estos dispositivos se realiza a través de la CLI (Command Line Interface).
+    \item Módulos de ampliación: Algunos modelos de switches permiten la adición de módulos de expansión como interfaces adicionales o módulos de alimentación redundante.
+    \item Tarjetas disponibles: Los switches suelen venir con tarjetas de puertos FastEthernet o GigabitEthernet, y en algunos casos, módulos SFP para enlaces de fibra óptica.
+\end{itemize}
+\end{enumerate}
+
+\section{Cableado}
+A continuacion se describen las caracteristicas de los diferentes tipos de cables disponibles en Packet Tracer y su uso práctico dentro de la plataforma. El cableado es fundamental para establecer las conexiones físicas entre los dispositivos de red, y cada tipo de cable tiene un propósito específico.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\linewidth]{Cableado.png}
+    \caption{Cableado}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{enumerate}
+    \item Cable de Par Trenzado (Cobre):
+    \begin{itemize}
+        \item Cable directo (Straight-through): Se utiliza para conectar dispositivos de diferente tipo, como un PC a un switch o un switch a un router. Es el tipo de cable más comúnmente utilizado en redes LAN para establecer conexiones básicas entre dispositivos finales y dispositivos de red.
+        \item Cable cruzado (Crossover): Se emplea para conectar dispositivos del mismo tipo, como un switch a otro switch, o un PC a otro PC. Útil en escenarios donde se requiere la conexión directa entre dos dispositivos sin necesidad de un switch intermedio.
+        \item Cable de consola (Rollover): Se utiliza para conectar un PC al puerto de consola de un router o switch, permitiendo la configuración del dispositivo mediante la interfaz de línea de comandos (CLI). Es fundamental para la configuración inicial de dispositivos de red, especialmente en entornos de aprendizaje o cuando no hay acceso a la red para configuraciones remotas.
+    \end{itemize}
+    \item Cable de Fibra Óptica: Se utiliza en enlaces troncales dentro de una red que requieren alta velocidad de transmisión y baja latencia. Tambien en infraestructuras de red donde se requiere una gran capacidad de ancho de banda y conexiones a larga distancia.
+    \item Cable Coaxial: Aunque su uso ha disminuido en redes modernas, sigue siendo relevante en ciertas aplicaciones como redes de televisión por cable o algunos sistemas de banda ancha.
+    \item Cables Serie: Se emplea para establecer conexiones punto a punto entre routers, especialmente en enlaces WAN (Wide Area Network).
+\end{enumerate}
+
+\section{Actividad práctica}
+Finalmente se realizará una actividad práctica interconectando dos PCs via una simple conexión cruzada, observando los elementos necesarios, que tipo de estudios se pueden llevar a cabo e indicando las limitaciones que serán superadas durante el avance de la materia.
+
+Al conectar dos PCs vía un cable de conexion cruzada se conectan perfectamente, pero tengo una limitacion a la hora de conectar otra PC a la misma red porque el cable cruzado solo permite la conexion entre dos dispositivos.
+
+
+\section{Referencias}
+\begin{itemize}
+    \item https://skillsforall.com/course/getting-started-cisco-packet-tracer?courseLang=en-US
+    \item https://github.com/MatiasHaspert/RedesDeLasComputadorasI
+\end{itemize}
+\end{document}
